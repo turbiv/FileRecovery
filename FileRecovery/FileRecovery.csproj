@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F09A641-FB53-4A6E-8D4E-7801D94BF314}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FileRecovery</RootNamespace>
+    <AssemblyName>FileRecovery</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Disk.cs" />
+    <Compile Include="DiskStruct.cs" />
+    <Compile Include="Example\Algorithms.cs" />
+    <Compile Include="Example\Attributes.cs" />
+    <Compile Include="Example\IDiskInfo.cs" />
+    <Compile Include="Example\IFragment.cs" />
+    <Compile Include="Example\INode.cs" />
+    <Compile Include="Example\IStream.cs" />
+    <Compile Include="Example\NtfsReader.Algorithms.cs" />
+    <Compile Include="Example\NtfsReader.cs" />
+    <Compile Include="Example\NtfsReader.NativeMethods.cs" />
+    <Compile Include="Example\NtfsReader.Public.cs" />
+    <Compile Include="Example\RetrieveMode.cs" />
+    <Compile Include="MFT.cs" />
+    <Compile Include="NTFS.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestLib\Objects\Disk\BLOCK_PREFETCH.cs" />
+    <Compile Include="TestLib\Objects\Disk\DISK_CACHE_INFORMATION.cs" />
+    <Compile Include="TestLib\Objects\Disk\DISK_CACHE_INFORMATION_UNION.cs" />
+    <Compile Include="TestLib\Objects\Disk\DISK_CACHE_RETENTION_PRIORITY.cs" />
+    <Compile Include="TestLib\Objects\Disk\DISK_EX_INT13_INFO.cs" />
+    <Compile Include="TestLib\Objects\Disk\DISK_GEOMETRY.cs" />
+    <Compile Include="TestLib\Objects\Disk\DISK_GEOMETRY_EX.cs" />
+    <Compile Include="TestLib\Objects\Disk\DISK_PARTITION_INFO.cs" />
+    <Compile Include="TestLib\Objects\Disk\DRIVE_LAYOUT_INFORMATION.cs" />
+    <Compile Include="TestLib\Objects\Disk\DRIVE_LAYOUT_INFORMATION_EX.cs" />
+    <Compile Include="TestLib\Objects\Disk\DRIVE_LAYOUT_INFORMATION_EX_INTERNAL.cs" />
+    <Compile Include="TestLib\Objects\Disk\DRIVE_LAYOUT_INFORMATION_GPT.cs" />
+    <Compile Include="TestLib\Objects\Disk\DRIVE_LAYOUT_INFORMATION_INTERNAL.cs" />
+    <Compile Include="TestLib\Objects\Disk\DRIVE_LAYOUT_INFORMATION_MBR.cs" />
+    <Compile Include="TestLib\Objects\Disk\DRIVE_LAYOUT_INFORMATION_UNION.cs" />
+    <Compile Include="TestLib\Objects\Disk\GETVERSIONINPARAMS.cs" />
+    <Compile Include="TestLib\Objects\Disk\GET_DISK_ATTRIBUTES.cs" />
+    <Compile Include="TestLib\Objects\Disk\GET_LENGTH_INFORMATION.cs" />
+    <Compile Include="TestLib\Objects\Disk\MEDIA_TYPE.cs" />
+    <Compile Include="TestLib\Objects\Disk\PARTITION_INFORMATION.cs" />
+    <Compile Include="TestLib\Objects\Disk\PARTITION_INFORMATION_EX.cs" />
+    <Compile Include="TestLib\Objects\Disk\PARTITION_INFORMATION_GPT.cs" />
+    <Compile Include="TestLib\Objects\Disk\PARTITION_INFORMATION_MBR.cs" />
+    <Compile Include="TestLib\Objects\Disk\PARTITION_INFORMATION_UNION.cs" />
+    <Compile Include="TestLib\Objects\Disk\SCALAR_PREFETCH.cs" />
+    <Compile Include="TestLib\Objects\Enums\EFIPartitionAttributes.cs" />
+    <Compile Include="TestLib\Objects\Enums\FileAttributes.cs" />
+    <Compile Include="TestLib\Objects\Enums\IOControlCode.cs" />
+    <Compile Include="TestLib\Objects\Enums\IOFileDevice.cs" />
+    <Compile Include="TestLib\Objects\Enums\IOMethod.cs" />
+    <Compile Include="TestLib\Objects\Enums\PartitionStyle.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\COMPRESSION_FORMAT.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\EXFAT_STATISTICS.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FAT_STATISTICS.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FileExtentInfo.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FileSystemStats.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FILESYSTEM_STATISTICS.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FILESYSTEM_STATISTICS_TYPE.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FILE_ALLOCATED_RANGE_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FILE_SET_SPARSE_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\FILE_ZERO_DATA_INFORMATION.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\IFSStats.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\MFT_ENUM_DATA_V0.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\MOVE_FILE_DATA.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\NTFS_FILE_RECORD_INPUT_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\NTFS_FILE_RECORD_OUTPUT_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\NTFS_STATISTICS.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\NTFS_STATISTICS_Allocate.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\NTFS_STATISTICS_WritesUserLevel.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\NTFS_VOLUME_DATA_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\RETRIEVAL_POINTERS_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\RETRIEVAL_POINTERS_EXTENT.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\RETRIEVAL_POINTER_BASE.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\STARTING_LCN_INPUT_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\STARTING_VCN_INPUT_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\FileSystem\VOLUME_BITMAP_BUFFER.cs" />
+    <Compile Include="TestLib\Objects\MountManager\MOUNTMGR_MOUNT_POINT.cs" />
+    <Compile Include="TestLib\Objects\MountManager\MOUNTMGR_MOUNT_POINTS.cs" />
+    <Compile Include="TestLib\Objects\MountManager\MOUNTMGR_TARGET_NAME.cs" />
+    <Compile Include="TestLib\Objects\MountManager\MOUNTMGR_VOLUME_PATHS.cs" />
+    <Compile Include="TestLib\Objects\MountManager\MountPoint.cs" />
+    <Compile Include="TestLib\Objects\Storage\STORAGE_BUS_TYPE.cs" />
+    <Compile Include="TestLib\Objects\Storage\STORAGE_DEVICE_DESCRIPTOR.cs" />
+    <Compile Include="TestLib\Objects\Storage\STORAGE_DEVICE_DESCRIPTOR_PARSED.cs" />
+    <Compile Include="TestLib\Objects\Storage\STORAGE_PROPERTY_ID.cs" />
+    <Compile Include="TestLib\Objects\Storage\STORAGE_PROPERTY_QUERY.cs" />
+    <Compile Include="TestLib\Objects\Storage\STORAGE_QUERY_TYPE.cs" />
+    <Compile Include="TestLib\Objects\Usn\IUSN_RECORD.cs" />
+    <Compile Include="TestLib\Objects\Usn\READ_USN_JOURNAL_DATA_V0.cs" />
+    <Compile Include="TestLib\Objects\Usn\READ_USN_JOURNAL_DATA_V1.cs" />
+    <Compile Include="TestLib\Objects\Usn\USN.cs" />
+    <Compile Include="TestLib\Objects\Usn\UsnJournalReasonMask.cs" />
+    <Compile Include="TestLib\Objects\Usn\USN_JOURNAL_DATA_V0.cs" />
+    <Compile Include="TestLib\Objects\Usn\USN_JOURNAL_DATA_V1.cs" />
+    <Compile Include="TestLib\Objects\Usn\USN_RECORD_V2.cs" />
+    <Compile Include="TestLib\Objects\Usn\USN_RECORD_V3.cs" />
+    <Compile Include="TestLib\Objects\Usn\USN_SOURCE_INFO.cs" />
+    <Compile Include="TestLib\Objects\Volume\DISK_EXTENT.cs" />
+    <Compile Include="TestLib\Objects\Volume\VOLUME_DISK_EXTENTS.cs" />
+    <Compile Include="TestLib\Utilities\MarshalHelper.cs" />
+    <Compile Include="TestLib\Utilities\UnmanagedMemory.cs" />
+    <Compile Include="TestLib\Utilities\Utils.cs" />
+    <Compile Include="TestLib\Wrapper\DeviceIoControlHelper.cs" />
+    <Compile Include="TestLib\Wrapper\DeviceIoWrapperBase.cs" />
+    <Compile Include="TestLib\Wrapper\DiskDeviceWrapper.cs" />
+    <Compile Include="TestLib\Wrapper\FilesystemDeviceWrapper.cs" />
+    <Compile Include="TestLib\Wrapper\MountManagerWrapper.cs" />
+    <Compile Include="TestLib\Wrapper\StorageDeviceWrapper.cs" />
+    <Compile Include="TestLib\Wrapper\UsnDeviceWrapper.cs" />
+    <Compile Include="TestLib\Wrapper\VolumeDeviceWrapper.cs" />
+    <Compile Include="Volume.cs" />
+    <Compile Include="WinAPI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug.json" />
+    <None Include="bin\Debug\FileRecovery.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\FileRecovery.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\FileRecovery.csprojAssemblyReference.cache" />
+    <None Include="TestLib\DeviceIOControlLib.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FileRecovery.exe" />
+    <Content Include="bin\Debug\FileRecovery.pdb" />
+    <Content Include="obj\Debug\FileRecovery.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\FileRecovery.exe" />
+    <Content Include="obj\Debug\FileRecovery.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>python C:\GIT\cc-response\Response-Tools\remote_build_transfer\remote_build_transfer.py --vmx "C:\VirtualMachine\windows7\Windows 7 v2.vmx" --build-dir C:\GIT\FileRecovery\FileRecovery\bin\Debug --user pavel --password 1234</PostBuildEvent>
+  </PropertyGroup>
+</Project>
